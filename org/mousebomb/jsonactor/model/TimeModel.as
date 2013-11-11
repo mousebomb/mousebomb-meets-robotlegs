@@ -24,6 +24,7 @@ package org.mousebomb.jsonactor.model
 			{
 				ServerTimeUtils.setServerTime(result as Number);
 				LogWriter.log('对时，时间差: ' + (ServerTimeUtils.offset));
+				dispatch(new UtilsEvent(UtilsEvent.TIME_VALIDATED));
 			}
 		}
 	}
