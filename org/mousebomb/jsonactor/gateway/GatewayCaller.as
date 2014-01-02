@@ -6,7 +6,7 @@ package org.mousebomb.jsonactor.gateway
 	import flash.events.DataEvent;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
-	import flash.filesystem.File;
+	import flash.net.FileReference;
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
 	import flash.net.URLRequestMethod;
@@ -53,7 +53,7 @@ package org.mousebomb.jsonactor.gateway
 		/**
 		 * 上传提交
 		 */
-		public function uploadFile(api : String, file : File, args : Object, succ : Function, err : Function = null) : void
+		public function uploadFile(api : String, file : FileReference, args : Object, succ : Function, err : Function = null) : void
 		{
 			var urlR : URLRequest = new URLRequest(GatewayConf.SERVICE_PATH + api + ".php");
 			urlR.method = URLRequestMethod.POST;
