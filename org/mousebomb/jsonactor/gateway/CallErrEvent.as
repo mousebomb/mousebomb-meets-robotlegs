@@ -1,5 +1,6 @@
 package org.mousebomb.jsonactor.gateway
 {
+	import org.mousebomb.jsonactor.model.ErrorCodeModel;
 	import org.mousebomb.utils.LogWriter;
 
 	import flash.events.Event;
@@ -28,7 +29,8 @@ package org.mousebomb.jsonactor.gateway
 		{
 			super(type);
 			this.errCode = errCode_;
-			LogWriter.log("Event:"+type + ", errCode="+errCode_);
+			msg = ErrorCodeModel.errorList[errCode_];
+			LogWriter.log("Event:"+type + ", errCode="+errCode_ + ",msg=" + msg);
 		}
 	}
 }

@@ -106,7 +106,7 @@ package org.mousebomb.jsonactor.gateway
 						else
 						{
 							// 默认处理
-							dispatch(new CallErrEvent(CallErrEvent.GATEWAY_CALL_ERR, resp.errCode));
+							dispatch(new CallErrEvent(CallErrEvent.GATEWAY_CALL_ERR, resp.errorCode));
 						}
 					}
 					else
